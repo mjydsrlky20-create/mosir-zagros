@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rapid-queen-5352.mjydsrlky20.workers.dev/sitemap.xml
+Sitemap: https://mjydsrlky20-create.github.io/mosir-zagros/sitemap.xml
