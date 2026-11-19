@@ -22,12 +22,12 @@
 <div class="notice">این نسخه اولیه است. اطلاعات در حافظه همین دستگاه ذخیره می‌شود و هنوز به حساب ابری یا بانک اطلاعاتی مشترک متصل نیست.</div>
 <h2 class="section">ابزارهای مدیریتی</h2>
 <div class="tiles">
-<a class="tile" href="#inventory"><span class="ico">📦</span><span><b>مدیریت موجودی</b><small>ثبت مقدار و تغییرات</small></span></a>
-<a class="tile" href="#buyers"><span class="ico">🌍</span><span><b>بانک خریداران</b><small>مشتریان داخلی و خارجی</small></span></a>
-<a class="tile" href="#follow"><span class="ico">📅</span><span><b>پیگیری مذاکرات</b><small>اقدام بعدی مشتریان</small></span></a>
-<a class="tile" href="#quote"><span class="ico">🧾</span><span><b>پیشنهاد فروش</b><small>آماده‌سازی پیام واتساپ</small></span></a>
-<a class="tile" href="#market"><span class="ico">📈</span><span><b>تحلیل بازار</b><small>ثبت قیمت و نرخ ارز</small></span></a>
-<a class="tile" href="#ai"><span class="ico">✨</span><span><b>دستیار هوشمند</b><small>ورود به گفت‌وگو با هوش مصنوعی</small></span></a>
+<a class="tile" href="#inventory" onclick="show('inventory',document.querySelectorAll('.nav button')[1]);return false"><span class="ico">📦</span><span><b>مدیریت موجودی</b><small>ثبت مقدار و تغییرات</small></span></a>
+<a class="tile" href="#buyers" onclick="show('buyers',document.querySelectorAll('.nav button')[2]);return false"><span class="ico">🌍</span><span><b>بانک خریداران</b><small>مشتریان داخلی و خارجی</small></span></a>
+<a class="tile" href="#follow" onclick="show('follow',document.querySelectorAll('.nav button')[3]);return false"><span class="ico">📅</span><span><b>پیگیری مذاکرات</b><small>اقدام بعدی مشتریان</small></span></a>
+<a class="tile" href="#quote" onclick="show('quote',document.querySelectorAll('.nav button')[4]);return false"><span class="ico">🧾</span><span><b>پیشنهاد فروش</b><small>آماده‌سازی پیام واتساپ</small></span></a>
+<a class="tile" href="#market" onclick="show('market',null);return false"><span class="ico">📈</span><span><b>تحلیل بازار</b><small>ثبت قیمت و نرخ ارز</small></span></a>
+<a class="tile" href="#ai" onclick="show('ai',null);return false"><span class="ico">✨</span><span><b>دستیار هوشمند</b><small>ورود به گفت‌وگو با هوش مصنوعی</small></span></a>
 </div></section>
 <section id="inventory" class="hidden"><h2 class="section">مدیریت موجودی موسیر</h2><div class="panel"><div class="field"><label>موجودی قابل عرضه (کیلوگرم)</label><input id="stock" type="number" min="0" value="8000"></div><button onclick="saveStock()">ذخیره موجودی</button><p class="muted">مقدار اولیه بر اساس اطلاعات فعلی سایت وارد شده؛ هر زمان می‌توانی اصلاحش کنی.</p></div></section>
 <section id="buyers" class="hidden"><h2 class="section">بانک خریداران</h2><div class="panel"><div class="field"><label>نام شخص یا شرکت *</label><input id="bname" placeholder="نام شرکت یا خریدار"></div><div class="row"><div class="field"><label>کشور / شهر</label><input id="bcountry" placeholder="مثلاً عراق"></div><div class="field"><label>شماره تماس / واتساپ</label><input id="bphone" placeholder="+964..."></div></div><div class="field"><label>نوع خریدار</label><select id="btype"><option>واردکننده</option><option>عمده‌فروش</option><option>صنایع غذایی</option><option>صادرکننده</option><option>سایر</option></select></div><div class="field"><label>یادداشت</label><textarea id="bnote" placeholder="محصول موردنیاز، حجم خرید و..."></textarea></div><button onclick="addBuyer()">ثبت خریدار</button></div><div class="panel" style="margin-top:12px"><h3>فهرست خریداران</h3><div id="buyersList" class="muted">هنوز خریداری ثبت نشده است.</div></div></section>
