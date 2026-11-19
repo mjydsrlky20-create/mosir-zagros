@@ -1,0 +1,20 @@
+{
+  "name": "موسیر زاگرس | پنل هوشمند",
+  "short_name": "موسیر زاگرس",
+  "description": "مدیریت هوشمند فروش و صادرات موسیر",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./app.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f6f2",
+  "theme_color": "#103f32",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
