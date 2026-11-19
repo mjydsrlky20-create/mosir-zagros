@@ -7,6 +7,7 @@
 <meta name="description" content="فروش عمده موسیر خشک پلاک صادراتی از اصفهان، ایران. استعلام قیمت برای سفارش‌های عمده داخلی و صادراتی.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#103f32">
+<link rel="manifest" href="manifest.webmanifest">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fa_IR">
 <meta property="og:title" content="موسیر پلاک صادراتی | فروش عمده و صادرات">
@@ -66,6 +67,7 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;fle
     <a href="#about"><span class="fa">درباره ما</span><span class="en">About</span></a>
     <a href="#contact"><span class="fa">تماس</span><span class="en">Contact</span></a>
   </nav>
+  <a class="btn dark" href="app.html" style="padding:8px 12px;font-size:12px">ورود به اپلیکیشن</a>
   <div class="lang"><button type="button" onclick="setLang('fa')">FA</button> | <button type="button" onclick="setLang('en')">EN</button></div>
 </div></header>
 <main>
@@ -146,6 +148,7 @@ function setLang(lang){
   document.documentElement.dir=lang==='en'?'ltr':'rtl';
 }
 document.getElementById('year').textContent=new Date().getFullYear();
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
 document.getElementById('inquiryForm').addEventListener('submit',function(e){
  e.preventDefault();
  const lang=document.body.classList.contains('english')?'en':'fa';
