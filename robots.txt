@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://mjydsrlky20-create.github.io/mosir-zagros/sitemap.xml
-Sitemap: https://mjydsrlky20-create.github.io/mosir-zagros/sitemap.txt
