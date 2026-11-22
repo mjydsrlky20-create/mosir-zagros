@@ -7,6 +7,19 @@
 <style>
 :root{--g:#103f32;--g2:#17624c;--gold:#d6b36a;--bg:#f3f6f2;--ink:#17352d;--muted:#718078;--line:#e1e9e2}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px Tahoma,Arial,sans-serif;line-height:1.8}.wrap{max-width:900px;margin:auto;padding:16px 16px 90px}.top{background:var(--g);color:#fff;padding:20px 0 26px}.topin{max-width:900px;margin:auto;padding:0 16px}.top h1{font-size:23px;margin:0}.top p{margin:4px 0 0;color:#dce9df;font-size:13px}.pill{display:inline-block;border:1px solid #ffffff55;border-radius:30px;padding:3px 10px;font-size:11px;margin-top:10px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}.stat,.panel,.tile{background:#fff;border:1px solid var(--line);border-radius:15px;padding:15px;box-shadow:0 4px 14px #123d2d08}.stat small{color:var(--muted)}.stat strong{display:block;font-size:24px;color:var(--g);line-height:1.5}.section{font-size:17px;margin:24px 0 10px;color:var(--g)}.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.tile{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit;min-height:76px}.ico{width:42px;height:42px;border-radius:12px;background:#eaf2ec;display:grid;place-items:center;font-size:21px;flex-shrink:0}.tile b{display:block;font-size:14px}.tile small{color:var(--muted);font-size:11px}.field{margin:10px 0}label{display:block;font-size:12px;font-weight:bold;margin-bottom:4px}input,textarea,select{width:100%;border:1px solid var(--line);border-radius:9px;padding:11px;font:inherit;background:#fff}button,.btn{border:0;border-radius:9px;background:var(--g);color:white;padding:11px 15px;font:inherit;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}.btn.gold{background:var(--gold);color:#26352b}.btn.light{background:#eaf2ec;color:var(--g)}.row{display:flex;gap:8px;flex-wrap:wrap}.row>*{flex:1}.item{padding:11px 0;border-bottom:1px solid var(--line)}.item:last-child{border:0}.muted{color:var(--muted);font-size:12px}.hidden{display:none!important}.nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:9px 3px calc(9px + env(safe-area-inset-bottom));z-index:4}.nav button{background:transparent;color:var(--muted);font-size:11px;padding:4px}.nav button.active{color:var(--g)}.nav span{display:block;font-size:19px}.notice{background:#fff7e5;border:1px solid #f0dfb7;padding:12px;border-radius:12px;font-size:12px}.tag{background:#eaf2ec;color:var(--g);border-radius:20px;padding:2px 8px;font-size:11px}
 @media(min-width:650px){.grid{grid-template-columns:repeat(4,1fr)}.tiles{grid-template-columns:repeat(3,1fr)}}
+
+/* Visual refinement for dashboard cards and mobile readability */
+.stat,.panel,.tile{border-radius:18px;box-shadow:0 8px 24px #123d2d0d}
+.stat{padding:20px}.stat small{font-size:13px}.stat strong{font-size:28px}
+.section{font-size:21px;font-weight:900;margin:28px 0 13px}
+.tiles{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.tile{padding:17px;min-height:94px;gap:13px;border-color:#dfe9e1}
+.tile b{font-size:16px}.tile small{font-size:13px;line-height:1.6}
+.ico{width:48px;height:48px;font-size:23px}
+.panel{padding:21px}.notice{font-size:14px;line-height:1.9;padding:15px}
+@media(max-width:649px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.tile{padding:13px;min-height:88px}.tile b{font-size:14px}.tile small{font-size:12px}.ico{width:42px;height:42px;font-size:20px}.stat{padding:15px}.stat strong{font-size:24px}}
+@media(max-width:370px){.tiles{grid-template-columns:1fr}}
+
 </style></head>
 <body>
 <header class="top"><div class="topin"><div class="row" style="align-items:center"><div style="flex:1"><h1>موسیر زاگرس</h1><p>مرکز هوشمند مدیریت فروش و صادرات</p></div><button id="install" class="btn gold hidden">نصب اپلیکیشن</button></div><span class="pill">نسخه آزمایشی ۱.۰ · قابل استفاده آفلاین</span></div></header>
