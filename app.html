@@ -20,6 +20,49 @@
 @media(max-width:649px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.tile{padding:13px;min-height:88px}.tile b{font-size:14px}.tile small{font-size:12px}.ico{width:42px;height:42px;font-size:20px}.stat{padding:15px}.stat strong{font-size:24px}}
 @media(max-width:370px){.tiles{grid-template-columns:1fr}}
 
+
+/* Unified premium visual pass — November 2026 */
+:root{--ui-radius:18px;--ui-shadow:0 12px 32px rgba(16,63,50,.09);--ui-shadow-hover:0 18px 38px rgba(16,63,50,.14)}
+html{scroll-padding-top:90px}
+body{ -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility}
+a,button,input,select,textarea{transition:background-color .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid rgba(214,179,106,.75);outline-offset:3px}
+h1,h2,h3{letter-spacing:-.25px}
+.btn,button{min-height:46px;border-radius:12px;font-weight:800}
+.btn:hover,button:hover{filter:brightness(1.035);transform:translateY(-1px);box-shadow:0 8px 18px rgba(16,63,50,.12)}
+.btn:active,button:active{transform:translateY(0)}
+.card,.panel,.feature,.formbox,.contact-panel,.hero-card,.stat,.tile{border-radius:var(--ui-radius)}
+.card,.panel,.formbox,.stat,.tile{box-shadow:var(--ui-shadow)}
+.card:hover,.tile:hover{box-shadow:var(--ui-shadow-hover)}
+input,select,textarea{min-height:48px;border:1px solid #cbd8ce;border-radius:11px;padding:12px 14px;font-size:16px;line-height:1.6}
+textarea{min-height:118px}
+label{font-size:15px;line-height:1.7}
+.note,.muted{line-height:1.85}
+@media(max-width:760px){
+  body{font-size:16px}
+  .wrap{width:min(100% - 30px,1120px)}
+  .btn,button{min-height:48px;padding:12px 16px}
+  .hero h1{line-height:1.45}
+  .section-head{margin-bottom:24px}
+  .section-head p,.intro p{font-size:16px;line-height:1.9}
+  .feature{padding:17px 12px}
+  .feature b{font-size:16px}
+  .feature span{font-size:14px;line-height:1.8}
+  .card{padding:19px}
+  .card h3{font-size:18px;line-height:1.65}
+  .card p{font-size:15px;line-height:1.9}
+  .spec{padding:16px}
+  .spec b{font-size:16px}
+  .spec span{font-size:16px;line-height:1.85}
+  .panel,.formbox{padding:20px}
+  .navlinks a,.links a{min-height:42px;display:flex;align-items:center;justify-content:center}
+}
+@media(max-width:420px){
+  .hero{padding-top:38px;padding-bottom:40px}
+  .section-head h2,.intro h2{font-size:24px}
+  .card,.panel,.formbox{padding:17px}
+}
+
 </style></head>
 <body>
 <header class="top"><div class="topin"><div class="row" style="align-items:center"><div style="flex:1"><h1>موسیر زاگرس</h1><p>مرکز هوشمند مدیریت فروش و صادرات</p></div><button id="install" class="btn gold hidden">نصب اپلیکیشن</button></div><span class="pill">نسخه آزمایشی ۱.۰ · قابل استفاده آفلاین</span></div></header>
