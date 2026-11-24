@@ -127,7 +127,27 @@ label{font-size:15px;line-height:1.7}
 <section id="follow" class="hidden"><h2 class="section">پیگیری مذاکرات</h2><div class="panel"><div class="field"><label>نام خریدار / شرکت</label><input id="fname"></div><div class="field"><label>اقدام بعدی</label><input id="faction" placeholder="مثلاً تماس برای اعلام قیمت"></div><div class="field"><label>تاریخ پیگیری</label><input id="fdate" type="date"></div><button onclick="addFollow()">ثبت پیگیری</button></div><div class="panel" style="margin-top:12px"><div id="followList" class="muted">پیگیری ثبت نشده است.</div></div></section>
 <section id="quote" class="hidden"><h2 class="section">تهیه پیشنهاد فروش</h2><div class="panel"><div class="field"><label>نام خریدار</label><input id="qbuyer"></div><div class="field"><label>مقدار (کیلوگرم)</label><input id="qqty" type="number" placeholder="مثلاً 1000"></div><div class="field"><label>قیمت هر کیلوگرم (اختیاری)</label><input id="qprice" placeholder="پس از استعلام"></div><div class="field"><label>مقصد تحویل</label><input id="qdest" placeholder="کشور / شهر"></div><button onclick="makeQuote()">ساخت پیام واتساپ</button><div id="quoteResult" class="muted" style="margin-top:12px"></div></div></section>
 <section id="market" class="hidden"><h2 class="section">دفتر ثبت بازار</h2><div class="panel"><p class="muted">قیمت‌ها را با تاریخ و منبع ثبت کن؛ این بخش فعلاً ابزار ثبت داده است و ادعای قیمت زنده ندارد.</p><div class="field"><label>قیمت هر کیلوگرم (تومان)</label><input id="mprice" type="number"></div><div class="field"><label>منبع / توضیح</label><input id="msource" placeholder="نام بازار، تماس یا لینک"></div><button onclick="addMarket()">ثبت قیمت</button><div id="marketList"></div></div></section>
-<section id="ai" class="hidden"><h2 class="section">دستیار هوشمند</h2><div class="panel"><p>برای تحلیل بازار، تحقیق خریداران، تنظیم پیشنهاد صادراتی و برنامه‌ریزی فروش، از دستیار هوش مصنوعی استفاده کن.</p><a class="btn" href="https://chatgpt.com/" target="_blank" rel="noopener">باز کردن ChatGPT</a><p class="muted">اتصال مستقیم و خودکار مدل هوش مصنوعی به اپلیکیشن در مرحله بعد، پس از طراحی امن سرور و کلید API انجام می‌شود. کلید محرمانه نباید داخل کد عمومی سایت قرار بگیرد.</p></div></section>
+<section id="ai" class="hidden">
+<h2 class="section">مرکز دستیار هوشمند موسیر زاگرس</h2>
+<div class="panel">
+<div class="row" style="align-items:center"><span class="tag">نسخه آغازین</span><span class="muted">ویژه مدیریت فروش و توسعه بازار</span></div>
+<h3>چه کاری برایت آماده کنم؟</h3>
+<div class="tiles">
+<button class="tile" type="button" onclick="makeAITask('market')"><span class="ico">📊</span><span><b>تحلیل بازار موسیر</b><small>قیمت، صادرات، ارز و روند تقاضا</small></span></button>
+<button class="tile" type="button" onclick="makeAITask('buyers')"><span class="ico">🌍</span><span><b>یافتن خریداران</b><small>عراق، اقلیم کردستان و بازارهای دیگر</small></span></button>
+<button class="tile" type="button" onclick="makeAITask('outreach')"><span class="ico">✉️</span><span><b>متن معرفی و مذاکره</b><small>فارسی، عربی و انگلیسی</small></span></button>
+</div>
+<div class="field"><label for="aiFocus">بازار یا موضوع موردنظر</label><input id="aiFocus" value="عراق و اقلیم کردستان" placeholder="مثلاً بغداد، اربیل یا بازار داخلی"></div>
+<div class="field"><label for="aiPrompt">شرح مأموریت آماده‌شده</label><textarea id="aiPrompt" placeholder="یکی از مأموریت‌های بالا را انتخاب کن؛ متن آماده اینجا نمایش داده می‌شود."></textarea></div>
+<div class="row"><button type="button" onclick="copyAITask()">کپی دستور</button><a class="btn light" href="https://chatgpt.com/" target="_blank" rel="noopener">باز کردن ChatGPT</a></div>
+<p id="aiStatus" class="muted" aria-live="polite">پس از آماده‌سازی دستور، آن را کپی کن و در گفت‌وگوی هوش مصنوعی اجرا کن.</p>
+</div>
+<div class="panel">
+<h3>کنترل و امنیت</h3>
+<p>این نسخه می‌تواند مأموریت‌ها و اطلاعات کاری را روی همین دستگاه نگه دارد و دستورهای آماده تحقیق بسازد. اتصال مستقیم مدل، جست‌وجوی خودکار در پس‌زمینه و بانک اطلاعاتی مشترک هنوز فعال نشده‌اند و به سرور امن و تنظیم دسترسی نیاز دارند.</p>
+<p><b>اصل ثابت:</b> هیچ پیام به خریدار، اعلام قیمت، سفارش یا تعهد تجاری بدون تأیید شما ارسال نمی‌شود.</p>
+</div>
+</section>
 
 <section id="exportguide" class="hidden"><h2 class="section">راهنمای عملیات صادرات</h2>
 <div class="panel"><h3>۱. کنترل کیفیت و بهداشت</h3><p>محصول از نظر ظاهر، پاکیزگی، یکنواختی و مواد خارجی بازبینی شود. محیط، سطح کار و ابزار تمیز و خشک باشند. محموله دور از رطوبت، گردوغبار، حشرات و مواد شیمیایی نگهداری شود.</p></div>
@@ -147,6 +167,18 @@ function addBuyer(){if(!$('bname').value.trim())return alert('نام خریدا�
 function addFollow(){if(!$('fname').value.trim())return alert('نام خریدار را وارد کن.');let a=read('follows');a.push({name:$('fname').value,action:$('faction').value,date:$('fdate').value});write('follows',a);['fname','faction','fdate'].forEach(x=>$(x).value='');refresh()}
 function addMarket(){let a=read('market');a.unshift({price:$('mprice').value,source:$('msource').value,date:new Date().toLocaleDateString('fa-IR')});write('market',a);$('mprice').value='';$('msource').value='';refresh()}
 function makeQuote(){let t='درخواست همکاری و پیشنهاد فروش موسیر خشک پلاک صادراتی\nخریدار: '+($('qbuyer').value||'—')+'\nمقدار: '+($('qqty').value||'—')+' کیلوگرم\nقیمت هر کیلو: '+($('qprice').value||'پس از استعلام')+'\nمقصد: '+($('qdest').value||'—')+'\nبرای بررسی شرایط تحویل و معامله لطفاً پاسخ دهید.';$('quoteResult').innerHTML='<p>متن پیشنهاد آماده شد.</p><button onclick="navigator.clipboard.writeText('+JSON.stringify(t)+').then(()=>alert(\'کپی شد\'))">کپی پیام</button> <a class="btn light" href="https://wa.me/?text='+encodeURIComponent(t)+'" target="_blank">اشتراک‌گذاری</a>'}
+function makeAITask(kind){
+ const focus=($('aiFocus').value||'عراق و اقلیم کردستان').trim();
+ const stock=Number(localStorage.getItem('mz_stock')||8000);
+ const base='برای کسب‌وکار موسیر زاگرس، تأمین و فروش عمده موسیر خشک پلاک از اصفهان، تحقیق مستند و به‌روز انجام بده. بازار هدف: '+focus+'. موجودی قابل عرضه‌ای که فعلاً در پنل ثبت شده: '+stock.toLocaleString('fa-IR')+' کیلوگرم؛ این عدد را قطعی یا محدودکننده ظرفیت تأمین فرض نکن. پاسخ را فارسی، با تاریخ، منابع و لینک‌های قابل بررسی ارائه کن. داده قطعی را از برآورد جدا کن و هیچ اطلاعات تماس یا قیمت را حدس نزن. هیچ پیام یا معامله‌ای بدون تأیید من انجام نده.\n\n';
+ const prompts={
+ market:base+'تحلیل بازار موسیر خشک: قیمت‌های عمده‌فروشی و صادراتی در ایران و مقصد، روند صادرات، تقاضا، نرخ ارز، هزینه‌های مؤثر و ریسک‌های سیاسی/تجاری را بررسی کن. منابع تازه را مقایسه کن؛ اگر داده قابل اتکا موجود نیست شفاف بگو. در پایان سناریوهای محتاطانه و اقدام‌های پیشنهادی برای فروشنده ارائه بده.',
+ buyers:base+'خریداران مستقیم بالقوه را پیدا کن؛ اولویت با واردکنندگان، عمده‌فروشان و توزیع‌کنندگان واقعی موسیر یا محصولات خشک مشابه است. عراق و اقلیم کردستان در اولویت باشند. برای هر سرنخ نام شرکت، شهر، وب‌سایت رسمی، راه ارتباط عمومی منتشرشده، شواهد فعالیت و منبع را بیاور. واسطه‌ها را جدا کن و میزان اطمینان را مشخص کن.',
+ outreach:base+'یک پیام معرفی کوتاه و حرفه‌ای برای خریدار عمده بنویس؛ ابتدا فارسی و سپس عربی عراقی و انگلیسی. روی تأمین عمده، امکان هماهنگی بسته‌بندی و مقصد، مذاکره مستقیم و درخواست مشخصات سفارش تمرکز کن. ادعای گواهی، استاندارد، ظرفیت یا زمان تحویل تأییدنشده مطرح نکن.'
+ };
+ $('aiPrompt').value=prompts[kind]||'';$('aiStatus').textContent='دستور آماده شد. آن را کپی کن و برای اجرای تحقیق در ChatGPT قرار بده.';
+}
+async function copyAITask(){const v=$('aiPrompt').value.trim();if(!v)return alert('ابتدا یکی از مأموریت‌ها را انتخاب کن.');try{await navigator.clipboard.writeText(v);$('aiStatus').textContent='دستور کپی شد؛ حالا آن را در ChatGPT اجرا کن.'}catch(e){$('aiPrompt').focus();$('aiPrompt').select();$('aiStatus').textContent='متن انتخاب شد؛ از گزینه کپی مرورگر استفاده کن.'}}
 function refresh(){let n=Number(localStorage.getItem('mz_stock')||8000);$('stockView').textContent=n.toLocaleString('fa-IR')+' kg';$('stock').value=n;$('buyerCount').textContent=read('buyers').length.toLocaleString('fa-IR');$('followCount').textContent=read('follows').length.toLocaleString('fa-IR');$('buyersList').innerHTML=read('buyers').map(b=>'<div class="item"><b>'+esc(b.name)+'</b><br><span class="muted">'+esc(b.country)+' · '+esc(b.type)+' · '+esc(b.phone)+'</span></div>').join('')||'هنوز خریداری ثبت نشده است.';$('followList').innerHTML=read('follows').map(f=>'<div class="item"><b>'+esc(f.name)+'</b><br>'+esc(f.action)+'<br><span class="muted">'+esc(f.date)+'</span></div>').join('')||'پیگیری ثبت نشده است.';$('marketList').innerHTML=read('market').map(m=>'<div class="item">'+esc(m.price)+' تومان · '+esc(m.date)+'<br><span class="muted">'+esc(m.source)+'</span></div>').join('')}
 function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 refresh();if(location.hash&&$(location.hash.slice(1)))show(location.hash.slice(1),document.querySelector('.nav button'));
