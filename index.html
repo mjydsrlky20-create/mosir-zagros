@@ -125,6 +125,41 @@ label{font-size:15px;line-height:1.7}
   .card:hover,.tile:hover,.feature:hover,.stat:hover{transform:none}
 }
 
+
+/* Compact, balanced header */
+header{background:rgba(255,255,255,.97);backdrop-filter:blur(12px)}
+.nav{display:block;padding:13px 0 12px}
+.nav-top{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{font-size:21px;line-height:1.5;white-space:nowrap}
+.brand small{font-size:11px}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.lang{padding:3px;border-radius:12px;gap:2px}
+.lang a{padding:7px 9px;font-size:12px}
+.app-link{padding:8px 12px;font-size:12px;white-space:nowrap}
+.links{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:12px;padding-top:10px;border-top:1px solid #edf1ec}
+.links a{padding:6px 14px;border-radius:9px;background:#f4f7f3;font-size:13px;font-weight:700}
+.links a:hover{background:#e8f0e9;color:var(--green)}
+@media(max-width:760px){
+  .topbar{display:none}
+  .nav{padding:11px 0 10px}
+  .nav-top{gap:8px;align-items:center}
+  .brand{font-size:18px}
+  .brand small{font-size:10px}
+  .nav-actions{gap:0}
+  .lang{gap:1px;padding:3px}
+  .lang a{font-size:11px;padding:7px 8px}
+  .app-link{display:none}
+  .links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:10px;padding-top:10px}
+  .links a{display:flex;align-items:center;justify-content:center;min-height:39px;padding:5px 3px;font-size:12px;white-space:nowrap}
+}
+@media(max-width:380px){
+  .brand{font-size:16px}
+  .brand small{font-size:9px}
+  .lang a{font-size:10px;padding:6px}
+  .links{gap:5px}
+  .links a{font-size:11px}
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -155,19 +190,21 @@ label{font-size:15px;line-height:1.7}
 </div></div>
 <header><div class="wrap nav">
   <div class="brand"><span class="fa">موسیر زاگرس</span><span class="en">Mosir Zagros</span><small><span class="fa">تولید و عرضه موسیر خشک</span><span class="en">Dried Shallot | Wholesale & Export</span></small></div>
-  <nav class="links">
+  <div class="nav-top">
+    <div class="brand"><span class="fa">موسیر زاگرس</span><span class="en">Mosir Zagros</span><small><span class="fa">تولید و عرضه موسیر خشک</span><span class="en">Dried Shallot | Wholesale & Export</span></small></div>
+    <div class="nav-actions">
+      <div class="lang" aria-label="انتخاب زبان"><a class="current" href="index.html" lang="fa">فارسی</a><a href="wholesale-en.html" lang="en">English</a><a href="index-ar.html" lang="ar">العربية</a></div>
+      <a class="btn dark app-link" href="app.html">ورود به اپلیکیشن</a>
+    </div>
+  </div>
+  <nav class="links" aria-label="منوی اصلی">
     <a href="#home"><span class="fa">صفحه اصلی</span><span class="en">Home</span></a>
     <a href="#product"><span class="fa">محصول</span><span class="en">Product</span></a>
     <a href="wholesale.html"><span class="fa">خرید عمده</span><span class="en">Wholesale</span></a>
     <a href="export.html"><span class="fa">صادرات</span><span class="en">Export</span></a>
-    <a href="wholesale-en.html">English Wholesale</a>
-    <a href="export-en.html">English Export</a>
-    <a href="index-ar.html" lang="ar">العربية</a>
     <a href="#about"><span class="fa">درباره ما</span><span class="en">About</span></a>
     <a href="#contact"><span class="fa">تماس</span><span class="en">Contact</span></a>
   </nav>
-  <a class="btn dark" href="app.html" style="padding:8px 12px;font-size:12px">ورود به اپلیکیشن</a>
-  <div class="lang" aria-label="انتخاب زبان"><a class="current" href="index.html" lang="fa">فارسی</a><a href="wholesale-en.html" lang="en">English</a><a href="index-ar.html" lang="ar">العربية</a></div>
 </div></header>
 <main>
 <section class="hero" id="home"><div class="wrap hero-grid">
